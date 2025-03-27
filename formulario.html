@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header_logo" src="img/pau.png" height="175" width="280">
+        </a>
+    </header>
+    <nav class="navegacion">
+        <a class="navegacion_enlace" href="index.html">Inicio</a>
+        <a class="navegacion_enlace" href="zapatos.html">Zapateria</a>
+        <a class="navegacion_enlace" href="opciones.html">Opciones</a>
+        <a class="navegacion_enlace" href="ropa.html">Ropa</a>
+        <a class="navegacion_enlace" href="accesorios.html">Accesorios</a>
+        <a class="navegacion_enlace" href="formulario.html">Contacto</a>
+    </nav>
+    <br>
+    <div class="content">
+        <div class="container">
+            <h3>Formulario de contacto</h3>
+            <br>
+            <form id="imc-form">
+                <label for="peso">Nombre(s):</label>
+                <input type="text" id="peso" name="peso" required>
+                <br>
+                <label for="estatura">Apellido(s):</label>
+                <input type="text" id="estatura" name="estatura" required>
+                <br>
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                <br>
+                <label for="telefono">Teléfono celular:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                <br>
+                <button type="submit" id="enviar-btn">Enviar</button>
+            </form>
+            <div id="mensaje-enviado" style="display: none; color: green;">Los datos fueron enviados correctamente.</div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+       
+        <p class="footer-texto">Vazquez</p>
+    </footer>   
+
+    <script>
+        const form = document.getElementById('imc-form');
+        const enviarBtn = document.getElementById('enviar-btn');
+        const mensajeEnviado = document.getElementById('mensaje-enviado');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Your logic for sending form data here
+
+            mensajeEnviado.style.display = 'block'; // Show the success message
+            setTimeout(function() {
+                mensajeEnviado.style.display = 'none'; // Hide the success message after some time
+                form.reset(); // Reset the form
+            }, 3000); // Change 3000 to the desired duration in milliseconds
+        });
+    </script>
+</body>
+</html>

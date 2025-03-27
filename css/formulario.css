@@ -1,0 +1,46 @@
+.container {
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(255, 88, 219, 0.637); 
+    border-radius: 10px; 
+}
+
+#imc-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imc-form label {
+    margin-bottom: 10px;
+}
+
+#imc-form input {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+#imc-form button {
+    margin-bottom: 15px;
+    background-color: #ee56bb; /* Cambia el color del botón a rojo */
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 55%;
+}
+
+#imc-form button:hover {
+    background-color: #ee56bb; /* Cambia el color de fondo del botón al pasar el mouse */
+}
+
+#mensaje-enviado {
+    display: none; /* Oculta el mensaje de éxito inicialmente */
+}
